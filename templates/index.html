@@ -4,33 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Car Price Prediction</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='car-favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div style="color:white">
+    <div class="div2">
         <form action="{{ url_for('predict')}}" method="post">
-            <h1>PREDICT YOUR CAR PRICE!!</h1>
-            <h3>Year</h3>
-            <input id="first" name="Year" type="number ">
-            <h3>Enter the Showroom Price?(In lakhs)</h3><br><input id="second" name="Present_Price" required="required">
-            <h3>How Many Kilometers Drived?</h3><input id="third" name="Kms_Driven" required="required">
-            <h3>How much owners previously had the car(0 or 1 or 2) ?</h3><br><input id="fourth" name="Owner" required="required">
-            <h3>What Type of Car It Is?</h3><br><select name="Fuel_Type_Petrol" id="fuel" required="required">
+            <h1>PREDICT YOUR CAR PRICE!!</h1><br>
+            
+            <input class="form-input" type="number" name="Year" required="required" placeholder="When did you buy your car? e.g. 2010"><br>
+            <input class="form-input" type="text" name="Present_Price" required="required" placeholder="Enter the Showroom Price? e.g. 5 if price is 5 lakhs"><br>
+            <input class="form-input" type="text" name="Kms_Driven" required="required" placeholder="How Many Kilometers Drived? e.g. 10000"><br>
+            <input class="form-input" type="text" name="Owner" required="required" placeholder="How much owners previously had the car? e.g. 0 or 1 or 2 "><br>
+
+            <select class="form-input align-center" name="Fuel_Type_Petrol" required="required">
+                <option value="none">--- Select the Type of Car ---</option>
                 <option value="Petrol">Petrol</option>
                 <option value="Diesel">Diesel</option>
                 <option value="Diesel">CNG</option>
-            </select>
-            <h3>Are you A Dealer or Individual</h3><br><select name="Seller_Type_Individual" id="resea" required="required">
+            </select><br>
+            
+            <select class="form-input align-center" name="Seller_Type_Individual" required="required">
+                <option value="none">--- Are you A Dealer or Individual ---</option>
                 <option value="Dealer">Dealer</option>
                 <option value="Individual">Individual</option>
-            </select>
-            <h3>Transmission type</h3><br><select name="Transmission_Mannual" id="research" required="required">
+            </select><br>
+            
+            <select class="form-input align-center" name="Transmission_Mannual" required="required">
+                <option value="none">--- Select the Transmission Type ---</option>
                 <option value="Mannual">Manual Car</option>
                 <option value="Automatic">Automatic Car</option>
-            </select>
-            <br><br><button id="sub" type="submit ">Submit</button>
+            </select><br>
+            
+           
+
+            <br><input type="submit" class="myButton" value="Predict Price">
             <br>
 
 
@@ -40,124 +53,20 @@
 
 
 
-        <br><br><h3>{{ prediction_text }}<h3>
-        <br>
-        <br>
-        <p style="color:white;"><b><i>©2022 Uttam Burnwal</b></i></p>
+        <br><h3>{{ prediction_text }}<h3>
+        <br><br>
+        
+         <!-- Footer -->
+       <div class="footer">
+           <div class="contact">
+               <a target="_blank" href="https://github.com/UttamBurnwal/App_Car_Price_Prediction"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/uttamburnwal"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p style="color:black" class='footer-description'><b><i>©2022 Kumar Uttam Burnwal<b><i></p>
+       </div>
         
     </div>
 
-
-
-
-    <style>
-        body {
-            background-color: black;
-            text-align: center;
-            padding: 0px;
-        }
-        
-        #research {
-            font-size: 18px;
-            width: 100px;
-            height: 23px;
-            top: 23px;
-        }
-        
-        #box {
-            border-radius: 60px;
-            border-color: 45px;
-            border-style: solid;
-            font-family: cursive;
-            text-align: center;
-            background-color: rgb(168, 131, 61);
-            font-size: medium;
-            position: absolute;
-            width: 700px;
-            bottom: 9%;
-            height: 850px;
-            right: 30%;
-            padding: 0px;
-            margin: 0px;
-            font-size: 14px;
-        }
-        
-        #fuel {
-            width: 83px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #fuel:hover {
-            background-color: coral;
-        }
-        
-        #research {
-            width: 99px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #research:hover {
-            background-color: coral;
-        }
-        
-        #resea {
-            width: 99px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #resea:hover {
-            background-color: coral;
-        }
-        
-        #sub {
-            width: 120px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #sub:hover {
-            background-color: darkcyan;
-        }
-        
-        #first {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 18px;
-            text-align: center;
-        }
-        
-        #second {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 18px;
-            text-align: center;
-        }
-        
-        #third {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 18px;
-            text-align: center;
-        }
-        
-        #fourth {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 18px;
-            text-align: center;
-        }
-    </style>
 </body>
 
 </html>
