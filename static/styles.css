@@ -1,0 +1,91 @@
+html{
+	height: 100%;
+	margin: 0;
+}
+
+body {
+   	font-family: Arial, Helvetica, sans-serif;
+   	height: 100%;
+   	margin: 0;
+    background-image: url('https://wallpaperaccess.com/full/180123.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 0px;
+}
+
+/* Form */
+.form-input{
+	background-color: #E9E9E9;
+	width: 370px;
+	height: 30px;
+	border-radius: 3px;
+	border: 0;
+	text-align: center;
+	-webkit-box-shadow: 10px 5px 5px grey;
+	-moz-box-shadow: 10px 5px 5px grey;
+	box-shadow: inset 10px 5px 5px grey;
+	margin-bottom: 15px;
+}
+
+.div2{
+    color:white;
+	display: inline-block;
+	width: auto;
+	height: 429px;
+	text-align: center;
+}
+
+/* Predict Button */
+.myButton {
+	background-color: red;
+	border-radius: 5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:7px 30px;
+	margin-top: 10px;
+	text-decoration:none;
+	transition: 0.5s ease-out;
+}
+
+.myButton:hover{
+	background-color: #E9E9E9;
+	color: #000000;
+	box-shadow: inset 7px 3px 16px -10px rgba(0,0,0,0.75);
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* Footer */
+.footer{
+    background-color: #E9E9E9;
+	color: #000000;
+	padding: 7px;
+    text-align: center;
+}
+
+.contact-icon{
+	color: #000000;
+	padding: 7px;
+}
+
+.contact-icon:hover{
+	color: #a6a19a;
+}
+
+.footer-description{
+	margin: 0;
+	font-size: 12px;
+	font-weight: 100;
+}
+
+
