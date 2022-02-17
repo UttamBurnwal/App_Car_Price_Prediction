@@ -1,2 +1,2 @@
 # Car Price Prediction
-Visit: https://cp-generator.herokuapp.com/
+Visit: https://carprice-generator.herokuapp.com/
