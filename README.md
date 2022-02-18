@@ -1,6 +1,6 @@
 # Car Price Prediction App
 
---> A Machine Learning Web App that can predict the prices of cars based on factors such as year of purchase, type of model and so on. It is created with Flask and is currently deployed on Heroku platform.
+--> A Machine Learning Web App that can predict the prices of cars based on factors such as year of purchase, type of model and so on. It is created with ```Flask``` and is currently deployed on ```Heroku``` platform.
 
 Visit: https://carprice-generator.herokuapp.com/
 
