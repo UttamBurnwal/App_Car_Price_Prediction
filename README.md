@@ -33,7 +33,7 @@ Visit: https://carprice-generator.herokuapp.com/
 * README.md includes the stucture that provides a detailed description of my GitHub project.
 * app.py includes the all the routes and functions to perform the actions of web app. This file is the root of the Flask application which we will run in the command line prompt.
 * car data.csv is the dataset file which is in the csv format.
-* random_forest_regression_model.pkl is the random forest regression model that has been improved using the hyperprameter tuning. It is the core of the web application.
+* random_forest_regression_model.pkl is the random forest regression model that has been improved using the hyperparameter tuning. It is the core of the web application.
 * Requirements.txt file includes all the libraries that has been used to create the web app. After installing all the required packages, ``` pip freeze > requirements.txt ``` command was run on the command prompt to create the requirements.txt file
 
 ## Libraries Used
